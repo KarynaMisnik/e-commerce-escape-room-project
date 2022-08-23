@@ -1,0 +1,61 @@
+:root {
+
+/* font family */
+--ff-title_text: 'Limelight', cursive;
+--ff-content_text: 'Maven Pro', sans-serif;
+
+--clr-black: rgb(10, 10, 10);
+--clr-text: #fff;
+--clr-neon: rgb(192, 4, 40);
+}
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+* {
+padding: 0;
+margin: 0;
+text-decoration: none;
+}
+
+.info__container{
+margin-left: 25px;    
+}
+
+h1{
+color: var(--clr-neon);    
+text-align: center;
+margin-bottom: 5px; 
+font-size: 24px;
+font-weight: 900;
+text-shadow:
+0 0 0.125em rgb(202, 29, 58),
+0 0.25em 0.45em currentColor;
+font-family: var(--ff-title_text);
+text-transform: uppercase;
+letter-spacing: 0.50em;
+}
+
+.rules{
+margin-top: 2em;  
+color: var(--clr-text);  
+}
+
+h3{
+font-size: 24px;
+margin-bottom: 0.3em;
+margin-top: 1em;
+color: var(--clr-text);
+font-family: var(--ff-title_text);
+text-shadow: 0 0.50em 0.50em var(--clr-black);
+}
+
+.info{
+margin-top: 0.3em;
+font-size: 20px;
+color: var(--clr-text);
+font-family: var(--ff-content_text);
+}

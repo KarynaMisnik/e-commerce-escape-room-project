@@ -1,0 +1,466 @@
+:root{
+
+/* font family */    
+--ff-title_text: 'Limelight', cursive;
+--ff-content_text: 'Maven Pro', sans-serif;
+
+--clr-black: rgb(10, 10, 10);
+--clr-text: #fff;
+--clr-neon: rgb(192, 4, 40);
+
+/* background header */
+--clr-bg: rgb(30, 39, 46);
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+padding: 0;
+margin: 0;
+text-decoration: none;
+}
+
+
+body{
+background: var(--clr-bg);
+}
+
+main {
+padding-top: 100px;
+}
+
+header{
+position: fixed;
+top: 0;
+right: 0;
+left: 0;
+background: var(--clr-bg);
+width: 100%;
+height: 100px;
+transition: background 250ms ease-in;
+}
+
+header .header-brand{
+font-size: 24px;
+font-weight: 900;
+color: var(--clr-neon); 
+text-shadow:
+0 0 0.125em rgb(202, 29, 58),
+0 0.25em 0.45em currentColor;
+font-family: var(--ff-title_text);
+text-transform: uppercase;
+display: block;
+margin: 0 auto;
+text-align: center;
+padding: 20px 0 0 ;
+}
+
+header nav ul{ /* navigation panel top */
+display: block;
+margin: 0 auto;
+width: fit-content;
+}
+
+header nav ul li{
+display: inline-block;
+list-style: none;
+margin-top: .5em;
+padding: 0 16px ;
+}
+
+header nav ul li a {
+font-size: 16px;
+color: var(--clr-text);
+font-family: var(--ff-title_text);
+text-transform: uppercase;
+}
+/* navigation panel top end*/
+
+span .logo{
+width: 40px;
+height: 25px;
+}
+
+/* for desktop*/
+
+@media only screen and (min-width: 1000px) {
+    
+header .header-brand {
+margin: 30px 0 ;
+text-align: left;
+line-height: 38px;
+padding: 0 20px 0 40px;
+border-right: 3px solid white;
+float: left;
+}
+
+header nav ul {
+margin: 20px 0 0 20px;
+float: left;
+}
+
+header nav ul li a {
+line-height: 60px;
+}
+}
+/* desktop end*/
+
+/* background banner */
+.index-banner{
+width: 100%;
+height: calc(100vh - 100px);
+display: table;
+background-image: url("./background_top.png");
+background-repeat: no-repeat;
+background-size: 100%;
+}
+
+.vertical-center{
+display: table-cell;
+vertical-align: middle;
+}
+/* title banner */
+.index-banner h2{
+font-family: var(--ff-title_text);
+font-size: 60px;
+font-weight: 900;
+line-height: 70px;
+text-shadow: 2px 2px 8px #111;
+color: var(--clr-text);
+text-align: center;
+margin-bottom: 0.50em;
+margin-top: 1.25em;
+}    
+
+/* text banner */
+.index-banner h1{
+font-family: var(--ff-content_text);
+font-size: 28px;
+font-weight: 100;
+font-style: italic;
+line-height: 40px;
+text-shadow: 2px 2px 8px #111;
+color: #fff;
+text-align: center;
+}
+
+/* navigation main part */
+.index-links div{
+margin: 16px 16px 0;
+width: calc(100% - 32px);
+height: 100px;
+background: var(--clr-black);
+border-radius: .50em;
+box-shadow: 0.125em 0.125em 0.125em 0.125em #888888;
+}
+
+/* navigation names of categories */
+.index-links div h3{
+font-family: var(--ff-title_text);
+font-size: 28px;
+font-weight: 600;
+line-height: 100px;
+color: var(--clr-neon);
+text-align: center;
+text-transform: uppercase;
+text-shadow: 0 0 1em var(--clr-neon);
+}
+
+/* desktop for categories-cases */
+@media only screen and (min-width: 1000px) {
+.wrapper{
+width: 100%;
+margin:  0 auto;
+}
+
+.index-banner {
+width: 100%;
+height: 450px;
+}
+
+.index-banner h1 {
+display: block;
+width: 560px;
+margin: 0 auto;
+}
+
+.index-links{
+overflow: hidden;
+}
+
+.index-links div {
+margin: 20px 10px 5px;
+height: 230px;
+float: left;
+}
+
+.index-boxlink-square{
+width: calc(25% - 20px) !important; /* important ignores previous style and applyes to new one */
+}
+
+.index-boxlink-rectangle{
+width: calc(50% - 20px) !important;
+}
+
+.index-links div h3 {
+line-height: 230px;
+}
+}
+
+/* style for cases.php */
+
+/* photo carousel for rooms category starts */
+.slider{
+display: grid;  
+place-items: center;
+height: 350px;
+margin: auto;
+position: relative;
+width: 90%;
+overflow: hidden;
+}
+
+.slide__track{
+display: flex;
+width: calc(350px * 16);
+animation: scroll 40s linear infinite;
+}
+
+.slide__track:hover{
+animation-play-state: paused;
+}
+
+@keyframes scroll{
+0%{transform: translateX(0);}
+100% {transform: translateX(calc(-350px * 8));}
+}
+
+.slide{
+height: 250px;
+width: 350px;
+display: flex;
+align-items: center;
+padding: 25px;
+perspective: 100px;
+}
+
+img{
+width: 100%;
+transition: transform 1s;
+border-radius: 0.50em;
+}
+
+.img:hover{
+transform: translateZ(20px)
+}
+
+.slider::before,
+.slider::after{
+content: '';
+height: 100%;
+position: absolute;
+width: 15%;
+z-index: 2;
+}
+/* photo carousel ends */
+
+.cases-links  {
+overflow: hidden;
+}
+
+/* title in rooms category */
+.cases-links h2{
+font-family: var(--ff-title_text);
+font-size: 28px;
+font-weight: 600;
+color: rgb(255, 251, 251);
+text-transform: uppercase;
+letter-spacing: 0.50em;
+margin-bottom: 2em;
+margin-left: 2em;
+}
+
+/* icons in rooms category */
+.cases-link .fa-solid{
+color: var(--clr-neon);
+font-size: 1.5em;
+}
+
+/* rooms boxes in the center */
+.rooms{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+margin-bottom: 2em;
+margin-right: 2em;
+}
+
+.rooms .cases-link{
+width: 40em;   
+height: 22em;
+margin-bottom: 2em;
+margin-left: 2em;
+font-family: var(--ff-content_text);
+font-size: 1em;
+font-weight: 600;
+color: var(--clr-text);
+text-align: center;
+text-transform: uppercase;
+line-height: 200%;
+background: var(--clr-black);
+border-radius: .50em;
+box-shadow: 0.125em 0.125em 0.125em 0.125em #888888;
+}
+
+.person_icon{
+margin: 5px 5px;
+}
+
+/* book button */
+#book_room {
+font-size: 24px;
+font-family: var(--ff-title_text);
+background: var(--clr-neon);
+color: var(--clr-text);
+border-radius: 0.25em;
+border: none;
+padding: 5px;
+margin-top: 15px;
+}
+/* desktop for cases end */
+
+footer{
+margin: 0 10px 10px 10px;
+padding: 30px 30px;    
+overflow: hidden;
+}
+
+footer ul{
+float: left;
+padding-left: 20px;
+}
+
+footer ul li {
+display: block;
+list-style: none;
+}
+
+/* navigation categories */
+footer ul li a{
+font-family: var(--ff-content_text);
+font-size: 24px;
+color: var(--clr-text);
+line-height: 40px;
+text-shadow: 0 0.50em 0.50em var(--clr-black);
+}
+
+/* additional contact info */
+.footer-contact-main{
+font-family: var(--ff-content_text);
+font-size: 24px;
+color: var(--clr-text);
+line-height: 40px;
+text-shadow: 0 0.50em 0.50em var(--clr-black);
+}
+
+.footer-links-cases{
+display: none;
+}
+
+.footer__logo{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+margin-bottom: 1.25em;
+}
+
+.footer__logo img{
+width: 3em;
+height: 2em;
+}
+
+.footer__logo p{
+font-size: 20px;
+font-weight: 900;
+color: var(--clr-neon);
+text-shadow:
+0 0 0.125em rgb(202, 29, 58),
+0 0.25em 0.45em currentColor;
+font-family: var(--ff-title_text);
+text-transform: uppercase;
+text-align: center;
+}
+
+/* footer media */
+.footer-sm {
+display: flex;  
+flex-direction: column;
+flex-wrap: wrap;
+align-content: flex-end;
+}
+
+.footer-sm a i {
+background: var(--clr-neon);    
+color: var(--clr-text);
+width: 2em;
+height: 2em;
+box-shadow: 0 0.25em 0.25em var(--clr-black);
+margin-bottom: 25%;
+text-align: center;
+border-radius: 0.25em;
+line-height: 2em;
+}
+
+/* desktop for footer*/
+@media only screen and (min-width: 1000px) {
+
+.footer-links-cases {
+display: block;
+}
+
+footer ul {
+width: fit-content;
+float: left;
+padding-right: 30px;
+}
+
+footer ul li p {
+font-family: var(--ff-content_text);
+text-shadow: 0 0.50em 0.50em var(--clr-black);
+font-size: 24px;
+color: var(--clr-text);
+line-height: 40px;
+text-transform: uppercase;
+}
+
+.footer__logo img {
+width: 4.5em;
+height: 2.8em;
+}
+
+.footer__logo p {
+font-size: 40px;
+}
+
+.footer-sm {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-content: flex-start;
+}
+
+.footer-sm a i {
+width: 3em;
+height: 3em;
+line-height: 3em;
+margin: 7em 1.5em 0 1.5em;
+}
+}
+

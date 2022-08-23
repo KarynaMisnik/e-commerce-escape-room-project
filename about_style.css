@@ -1,0 +1,58 @@
+:root {
+
+/* font family */
+--ff-title_text: 'Limelight', cursive;
+--ff-content_text: 'Maven Pro', sans-serif;
+
+--clr-black: rgb(10, 10, 10);
+--clr-text: #fff;
+--clr-neon: rgb(192, 4, 40);
+
+/* background header */
+--clr-bg: rgb(30, 39, 46);
+}
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+* {
+padding: 0;
+margin: 0;
+text-decoration: none;
+}
+
+h1 {
+color: var(--clr-text);
+font-family: var(--ff-title_text);
+margin: 20px 20px;
+letter-spacing: 0.50em;
+}
+
+p{
+color: var(--clr-text);
+font-family: var(--ff-content_text);
+font-size: 24px;
+}
+
+.left__img{
+float: left;
+max-width: 400px;
+margin: 20px 20px;
+}
+
+.right__img{
+float: right;
+max-width: 400px;
+margin: 0px 20px;
+}
+
+.right{
+margin: 40px 20px;
+}
+
+.footer{
+margin-top: 40px;
+}
