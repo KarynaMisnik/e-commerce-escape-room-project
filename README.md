@@ -23,4 +23,3 @@ Pricing info in the database
 
 ![pricing](https://user-images.githubusercontent.com/96831988/186159260-29d5e624-e053-448a-8f22-08754c84996f.png)
 
-Bugs: On pages with booking system header text changes color. Footer is missing on one page. 
