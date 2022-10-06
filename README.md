@@ -1,7 +1,5 @@
 # e-commerce-escape-room-project
-HTML, CSS, PHP, SQL, JAVASCRIPT
 
- Imaginary website for selling escape rooms. Responsive layout. 
 
  Main page with different categories
 
