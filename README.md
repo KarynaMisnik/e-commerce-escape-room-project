@@ -1,4 +1,4 @@
-# e-commerce-escape-room-project
+# Escape Room - Booking system 
 
 
  Main page with different categories
